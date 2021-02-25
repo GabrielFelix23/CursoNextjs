@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Header from '../components/Header'
-import styles from '../styles/Home.module.css'
+import Navigation from '../components/navigation'
 
 export default function Home() {
   return (
     <>
+      <Navigation/>
       <Head>
         <title>Create Next App</title>
       </Head>
