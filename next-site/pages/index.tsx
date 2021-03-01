@@ -3,7 +3,7 @@ import Head from 'next/head'
 import {getPostList} from '../shared/util'
 import Header from '../components/Header'
 import Navigation from '../components/navigation'
-import {Link} from 'next/link'
+import Link from 'next/link'
 
 type PostList = string[]
 
