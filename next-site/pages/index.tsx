@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {getPostList} from '../shared/util'
 import Header from '../components/Header'
 import Navigation from '../components/navigation'
+import {Link} from 'next/link'
 
 type PostList = string[]
 
@@ -18,7 +19,11 @@ export default function Home({posts}:InferGetServerSidePropsType<typeof getStati
         <Header/>
         {posts.map((slug) => (
           <li key={slug}>
-            {slug.replaceAll('-', '')}
+            <Link href={`post/${slug}`}>
+              <a>
+                {slug.replaceAll('-', '')}
+              </a>
+            </Link>
           </li>
         ))}
       </main>
