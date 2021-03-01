@@ -21,7 +21,7 @@ export default function Home({posts}:InferGetServerSidePropsType<typeof getStati
           <li key={slug}>
             <Link href={`post/${slug}`}>
               <a>
-                {slug.replaceAll('-', '')}
+                {slug.replace(/-/g, '')}
               </a>
             </Link>
           </li>
